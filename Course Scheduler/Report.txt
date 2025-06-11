@@ -1,0 +1,23 @@
+ Technical Report on Priority Queue Implementation in Course Scheduling System
+Efficiency of the Priority Queue Implementation
+The Course Scheduling System employs a priority queue based on a binary heap for managing course registration requests. This implementation ensures efficient handling of requests with the following complexities:
+
+Insertion (enqueue)**: Requests are added based on priority (academic year, core courses, timestamp) with a time complexity of \(O(\log n)\), where \(n\) is the number of requests.
+- Deletion (dequeue)**: The highest priority request is processed in \(O(\log n)\) time.
+
+Overall, the priority queue allows the system to efficiently manage multiple requests, ensuring that higher-priority students are served first.
+ Balancing Fair Course Registration and Optimal Resource Utilization
+The registration algorithm balances fairness and resource utilization through:
+
+1. Priority Assignment**: Requests from students needing core courses for graduation are prioritized, ensuring timely access to necessary classes.
+2. Conflict Resolution**: The algorithm checks room availability and capacity to prevent scheduling conflicts, maximizing the use of resources.
+3. Class Size Balancing**: It distributes student enrollments evenly across sections to avoid overcrowding, ensuring optimal resource allocation.
+
+ Space and Time Complexity of the Solution
+- Space Complexity**: 
+  - The priority queue requires \(O(n)\) space for requests and \(O(m)\) for storing courses and students, leading to an overall space complexity of \(O(n + m)\).
+  
+- Time Complexity**: 
+  - Processing \(n\) requests involves \(O(n \log n)\) due to enqueue and dequeue operations. Additional checks for scheduling and resource allocation add \(O(m)\) complexity. Therefore, the overall time complexity is \(O(n \log n + m)\).
+
+In summary, the priority queue and scheduling algorithm provide an efficient, balanced, and resource-optimized course registration process in the Course Scheduling System.
